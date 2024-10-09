@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    Searched for: "{{ search_query }}"
+    <ul>
+    {% for product in results %}
+            <li>
+                {{ product.productimage_set.all }} {{ product.title }}
+            </li>
+    {% endfor %}
+    </ul>
+
+{% endblock content %}
